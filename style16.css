@@ -1,0 +1,191 @@
+@font-face {
+    font-family: "Cambria";
+    src: url("fonts/Cambria.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Voldemort";
+    src: url("fonts/Voldemort unleashed.ttf");
+    font-style: normal;
+}
+
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+* a {
+    text-decoration: none;
+    color: #000;
+}
+
+html {
+    font: normal 14px Cambria, sans-serif;
+    line-height: 1.28;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    display: grid;
+    width: 940px;
+    margin: 0 auto;
+    grid-gap: 10px;
+    grid-template-rows: 130px 300px 16px 409px 16px 99px 22px;
+    grid-template-areas:
+        "header"
+        "one"
+        "line1"
+        "four"
+        "line2"
+        "three"
+        "footer";
+}
+
+header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    /* grid-area: header;*/
+}
+
+header h1 {
+    font: bold 45px Voldemort, sans-serif;
+    color: black;
+    text-shadow: 0 4px 6px #8fc73e;
+    margin: 10px 10px;
+    max-height: 70px;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: #8fc73e;
+    letter-spacing: -0.6px;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    font: bold 17px Arial, sans-serif;
+    padding: 0 33px;
+    height: 100%;
+}
+
+nav a:nth-child(even) {
+    padding: 0 16px;
+}
+
+nav a:hover {
+    background-color: #fff;
+    border: 2px solid #e5e5e6;
+    border-bottom: none;
+}
+
+.one {
+    display: grid;
+    grid-template-columns: 540px 380px;
+    /*    grid-area: one;*/
+    grid-gap: 20px;
+}
+
+.one > * {
+    border: 10px solid #e5e5e6;
+}
+
+.one_text {
+    padding: 0 10px;
+    letter-spacing: -0.3px;
+}
+
+.one_text > h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.one_text > h2 a {
+    font: bold 24px Arial, sans-serif;
+}
+
+.one_text > h2 a:hover {
+    text-shadow: 0px 3px 3px rgba(143, 199, 62, 0.6);
+}
+
+.one_text > div {
+    margin: 10px 0;
+}
+
+.one_text .finish {
+    font: bold 14px Cambria, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.line {
+    background-color: #8fc73e;
+}
+
+.four {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*grid-area: four;*/
+    grid-gap: 20px;
+    letter-spacing: -0.3px;
+}
+
+.four h2 {
+    margin: 0 0 2px 0;
+    text-align: center;
+}
+
+.four h2 a {
+    font: bold 21px Arial, sans-serif;
+}
+
+.blue {
+    color: #1162b7;
+}
+
+.blue:hover {
+    color: #95d5c6;
+}
+
+.three {
+    display: grid;
+    background-color: #e5e5e6;
+    grid-template-columns: repeat(3, 1fr);
+    grid-area: three;
+    grid-gap: 20px;
+    letter-spacing: -0.4px;
+}
+
+.three .text3 {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+}
+
+
+/*#line1 {
+    grid-area: "line1";
+}*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /*    grid-area: footer;*/
+}
+
+footer h6 {
+    font: bold 12px Arial, sans-serif;
+    margin: 0;
+}
