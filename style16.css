@@ -38,22 +38,12 @@ body {
     margin: 0 auto;
     grid-gap: 10px;
     grid-template-rows: 130px 300px 16px 409px 16px 99px 22px;
-    grid-template-areas:
-        "header"
-        "one"
-        "line1"
-        "four"
-        "line2"
-        "three"
-        "footer";
 }
 
 header {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-
-    /* grid-area: header;*/
 }
 
 header h1 {
@@ -162,7 +152,6 @@ nav a:hover {
     display: grid;
     background-color: #e5e5e6;
     grid-template-columns: repeat(3, 1fr);
-    grid-area: three;
     grid-gap: 20px;
     letter-spacing: -0.4px;
 }
@@ -173,16 +162,10 @@ nav a:hover {
     margin: 0 5px;
 }
 
-
-/*#line1 {
-    grid-area: "line1";
-}*/
-
 footer {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /*    grid-area: footer;*/
 }
 
 footer h6 {
